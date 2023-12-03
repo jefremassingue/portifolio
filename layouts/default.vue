@@ -1,31 +1,40 @@
+<script setup>
+const menu = ref([
+    { id: 1, title: 'Sobre', route: 'about' },
+    { id: 2, title: 'Serviços', route: 'services' },
+    { id: 3, title: 'Projectos', route: 'projects' },
+    { id: 4, title: 'Blog', route: 'blog' },
+    { id: 5, title: 'Contacto', route: 'contact' },
+])
+
+const socialMedia = ref([
+    { id: 1, name: 'Linkedin', icon: 'ri-linkedin-line', link: "https://mz.linkedin.com/in/jefre-jos%C3%A9-massingue-21086a277?trk=people-guest_people_search-card" },
+    { id: 2, name: 'Github', icon: 'ri-github-line', link: "https://github.com/jefremassingue" },
+    { id: 3, name: 'Instagram', icon: 'ri-instagram-line', link: "https://www.instagram.com/jefre.dev/" },
+])
+</script>
 <template>
     <div>
 
         <header>
-            <nav class=" fixed w-full z-20 top-4 start-0  px-4 ">
+            <nav class="fixed z-20 w-full px-4 top-4 start-0">
                 <div
-                    class="max-w-screen-xl bg-base-200 rounded-2xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <NuxtLink href="/" class="flex items-center space-x-3">
+                    class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto bg-base-200 rounded-2xl">
+                    <NuxtLink to="/" class="flex items-center space-x-3">
                         <img src="/logo.svg" class="h-12" alt="Flowbite Logo">
-                        <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Flowbite</span> -->
+                        <!-- <span class="self-center text-2xl font-semibold text-white whitespace-nowrap">Flowbite</span> -->
                     </NuxtLink>
-                    <div class="flex md:order-2 space-x-3 md:space-x-0 gap-2">
-                        <button class="btn ">
-                            <i class="ri-linkedin-line ri-lg"></i>
-                        </button>
-                        <button class="btn ">
-                            <i class="ri-github-line ri-lg"></i>
-                        </button>
-                        <button class="btn ">
-                            <i class="ri-instagram-line ri-lg"></i>
-                        </button>
-                        <button type="button"
-                            class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center bg-primary hover:bg-blue-700 focus:ring-blue-800">
+                    <div class="flex items-center gap-2 space-x-3 lg:order-2 lg:space-x-0">
+                        <a  v-for="social in socialMedia" :key="social.id" target="_blank" :href="social.link" class="hidden btn md:flex">
+                            <i :class="social.icon" class="ri-lg"></i>
+                        </a>
+                        <NuxtLink :to="{ name: 'contact' }"
+                            class="text-white btn btn-primary btn-sm lg:btn-md">
                             Contacte-me
-                        </button>
+                        </NuxtLink>
 
                         <button data-collapse-toggle="navbar-sticky" type="button"
-                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2  text-zinc-400 hover:bg-zinc-700 focus:ring-zinc-600"
+                            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm rounded-lg lg:hidden focus:outline-none focus:ring-2 text-zinc-400 hover:bg-zinc-700 focus:ring-zinc-600"
                             aria-controls="navbar-sticky" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -35,26 +44,15 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
                         <ul
-                            class="flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0  bg-zinc-800 md:bg-zinc-900 border-zinc-700">
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:p-0 md:text-primary"
-                                    aria-current="page">Home</a>
+                            class="flex flex-col p-4 mt-4 font-medium border rounded-lg md:p-0 md:space-x-8 md:flex-row md:mt-0 md:border-0 ">
+                            <li v-for="link in menu" :key="link.id">
+                                <NuxtLink :to="{ name: link.route }"
+                                    class="block p-0 text-white rounded "
+                                    aria-current="page">{{ link.title }}</NuxtLink>
                             </li>
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 rounded md:p-0 md:hover:text-primary text-white hover:bg-zinc-700 hover:text-white md:hover:bg-transparent border-zinc-700">About</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 rounded md:p-0 md:hover:text-primary text-white hover:bg-zinc-700 hover:text-white md:hover:bg-transparent border-zinc-700">Services</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 rounded md:p-0 md:hover:text-primary text-white hover:bg-zinc-700 hover:text-white md:hover:bg-transparent border-zinc-700">Contact</a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -65,36 +63,41 @@
             <slot />
 
         </main>
-        <footer class=" footer max-w-screen-xl mx-auto p-10 bg-base-200 rounded-2xl my-11 text-base-content">
+        <footer class="max-w-screen-xl p-10 mx-auto mb-0 text-center rounded-t-2xl md:text-left footer bg-base-200 lg:rounded-2xl mt-11 lg:my-11 text-base-content">
             <aside>
-                <img src="/logo.svg" class="w-32" alt="">
-                <p>Jefre José Massingue.<br />Vamos transformar a sua ideia em uma solução tecnologica</p>
+                <img src="/logo.svg" class="w-32 mx-auto md:mx-0" alt="">
+                <p>Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
                 <p>Moçambique, Maputo - Bairro Laulane</p>
             </aside>
-            <nav>
-                <header class="footer-title">Services</header>
-                <a class="link link-hover">Branding</a>
-                <a class="link link-hover">Design</a>
-                <a class="link link-hover">Marketing</a>
-                <a class="link link-hover">Advertisement</a>
+            <nav class="w-full">
+                <header class="mx-auto text-center md:mx-0 footer-title ">Paginas</header>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="link in menu" :key="link.id">{{ link.title }}</a>
+
             </nav>
-            <nav>
-                <header class="footer-title">Company</header>
-                <a class="link link-hover">About us</a>
-                <a class="link link-hover">Contact</a>
-                <a class="link link-hover">Jobs</a>
-                <a class="link link-hover">Press kit</a>
+            <nav class="w-full">
+                <header class="mx-auto md:mx-0 footer-title">Servicos</header>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">About us</a>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Contact</a>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Jobs</a>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Press kit</a>
             </nav>
-            <nav>
-                <header class="footer-title">Legal</header>
-                <a class="link link-hover">Terms of use</a>
-                <a class="link link-hover">Privacy policy</a>
-                <a class="link link-hover">Cookie policy</a>
+            <nav class="w-full">
+                <header class="mx-auto md:mx-0 footer-title">Legal</header>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Terms of use</a>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Privacy policy</a>
+                <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Cookie policy</a>
             </nav>
         </footer>
     </div>
 </template>
-<script setup>
 
-</script>
-<style ></style>
+<style >
+
+nav a:hover,
+ nav a.router-link-active,
+ nav a.router-link-exact-active {
+   /* color: indianred; */
+    color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
+   cursor: pointer;
+ }
+</style>

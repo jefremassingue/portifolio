@@ -294,7 +294,7 @@ const currentSkill = ref(1);
                         <font style="vertical-align: inherit;">👋</font>
                     </font>
                 </span>
-                <span class="text-2xl md:text-4xl xl:text-5xl">Olá, eu sou Jefre </span> <br>
+                <span class="">Olá, eu sou Jefre </span> <br>
 
 
                 <p class="mt-2"><text-typing
@@ -323,9 +323,9 @@ const currentSkill = ref(1);
 
     </section>
 
-    <section class="flex flex-col max-w-screen-xl grid-cols-12 gap-8 mx-auto my-8 md:grid md:my-16 lg:my-24 md:gap-16">
+    <section class="grid max-w-screen-xl grid-cols-12 gap-8 mx-auto my-8 md:my-16 lg:my-24 md:gap-16">
         <div class="flex flex-col col-span-10 gap-4 md:col-span-5">
-            <h4 class="text-5xl font-bold text-center text-white md:text-left">Habilidades</h4>
+            <h4 class="text-5xl font-bold text-white">Habilidades</h4>
 
             <p class="text-white">Meu conjunto de habilidades abrange diversas linguagens de programação e frameworks, tendo
                 alta capacidade de aprender novas tecnologias e conceitos no vasto mundo de desenvolvimento!</p>
@@ -344,8 +344,8 @@ const currentSkill = ref(1);
                 </ul>
             </div>
         </div>
-        <div class="flex items-center w-full md:col-span-7">
-            <ul class="grid flex-wrap items-center justify-center w-full grid-cols-3 gap-4 md:grid-cols-4 lg:flex" name="list"
+        <div class="flex items-center w-full col-span-11 md:col-span-7">
+            <ul class="grid flex-wrap items-center justify-center w-full grid-cols-3 gap-4 mr-4 lg:flex" name="list"
                 tag="ul">
                 <template v-for="tech, in (skills.find(({ id }) => id == currentSkill) || []).technologies"
                     :key="currentSkill + '-' + tech.id">
@@ -363,13 +363,15 @@ const currentSkill = ref(1);
         </div>
     </section>
 
-    <section class="p-4 pb-16 -mx-4 bg-base-200 lg:-mx-4">
+
+
+    <section class="p-4 pb-16 -mx-4 -mr-8 bg-base-200 lg:-mx-4">
         <div class="w-full max-w-screen-xl mx-auto">
 
             <header class="my-8 md:text-center lg:my-16">
-                <h4 class="text-5xl font-bold text-center text-white md:text-left">Projectos</h4>
+                <h4 class="text-5xl font-bold text-white">Projectos</h4>
 
-                <p class="mt-4 text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens de programação e
+                <p class="mt-4 text-white">Meu conjunto de habilidades abrange diversas linguagens de programação e
                     frameworks, tendo
                     alta capacidade de aprender novas tecnologias e conceitos no vasto mundo de desenvolvimento!</p>
 
@@ -435,7 +437,7 @@ const currentSkill = ref(1);
         </div>
     </section>
 
-    <section class="p-4 pb-16 -mx-4 bg-gray-800 lg:-mx-4">
+    <section class="p-4 pb-16 -mx-4 -mr-8 bg-gray-800 lg:-mx-4">
         <div class="flex max-w-screen-xl mx-auto">
 
 
@@ -444,9 +446,9 @@ const currentSkill = ref(1);
             <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3 md:mt-16">
                 <div class="">
                     <header class="mt-16 ">
-                        <h4 class="text-5xl font-bold text-center text-white md:text-left">Meus serviços</h4>
+                        <h4 class="text-5xl font-bold text-white">Meus serviços</h4>
 
-                        <p class="mt-4 text-center text-white md:text-left ">
+                        <p class="mt-4 text-white">
                             Com uma ampla gama de habilidades técnicas e uma abordagem centrada no utilizador, estou
                             comprometido em
                             fornecer serviços de alta qualidade que impulsionam o sucesso do seu projecto.
@@ -486,13 +488,13 @@ const currentSkill = ref(1);
     </section>
 
 
-    <section class="p-4 pb-16 -mx-4">
+    <section class="p-4 pb-16 -mx-4 -mr-8 lg:-mx-4">
         <div class="max-w-screen-xl mx-auto">
 
             <header class="my-16 text-center">
-                <h4 class="text-5xl font-bold text-center text-white md:text-left">Blog</h4>
+                <h4 class="text-5xl font-bold text-white">Blog</h4>
 
-                <!-- <p class="mt-4 text-center text-white md:text-left">
+                <!-- <p class="mt-4 text-white">
                     Com uma ampla gama de habilidades técnicas e uma abordagem centrada no utilizador, estou comprometido em
                     fornecer serviços de alta qualidade que impulsionam o sucesso do seu projecto.
                 </p> -->
@@ -524,7 +526,58 @@ const currentSkill = ref(1);
         </div>
     </section>
 
+    <section
+        class="grid max-w-screen-xl gap-4 p-8 mx-auto my-16 text-left bg-blue-800 md:gap-8 md:p-12 lg:p-16 lg:grid-cols-2 rounded-2xl">
 
+        <div class="flex flex-col justify-center gap-6">
+            <h1 class="text-xl font-bold text-white md:text-4xl xl:text-5xl">
+
+                <span>Tem uma ideia de projecto. Vamos trabalhar juntos!</span>
+            </h1>
+            <p class="text-zinc-100 text-md md:text-lg lg:text-xl">
+                Quer me dizer oi ou quer começar seu projecto e precisa da minha ajuda? Sinta-se livre para me contactar.
+            </p>
+            <div class="flex flex-col gap-4 md:flex-row">
+                <button class="btn btn-warning">
+                    <span>Vamos trabalhar juntos!</span>
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+
+        </div>
+        <div class="">
+            <div class="flex flex-col h-full gap-4 md:flex-row lg:flex-col lg:justify-center lg:px-16 lg:gap-8">
+                <div class="flex items-center gap-4 px-6 py-4 bg-gray-900 rounded-xl">
+                    <span>
+                        <i class="ri-mail-line lg:text-[38px]"></i>
+                    </span>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="uppercase">Fala comigo</h4>
+                        <h2 class="lg:text-lg text-zinc-100">jefre.dev@gmail.com</h2>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 px-6 py-4 bg-gray-900 rounded-xl">
+                    <span>
+                        <i class="ri-phone-line lg:text-[38px]"></i>
+                    </span>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="uppercase">Liga para mim</h4>
+                        <h2 class="lg:text-lg text-zinc-100">(+258) 84 480 6400 / 86 917 3996</h2>
+                    </div>
+                </div>
+                <!-- <div class="flex items-center gap-4 px-6 py-4 bg-gray-900 rounded-xl">
+                    <span>
+                        <i class="ri-phone-line lg:text-[38px]"></i>
+                    </span>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="uppercase">Fala comigo</h4>
+                        <h2 class="lg:text-lg text-zinc-100">jefre.dev@gmail.com</h2>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
 </template>
 
 <style >
