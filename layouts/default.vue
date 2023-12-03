@@ -4,8 +4,8 @@ useSeoMeta({
     ogTitle: '👋 Olá Mundo - Jefre Massingue',
     description: 'Sou Jefre José Massingue, um apaixonado desenvolvedor fullstack com uma sólida formação em Informática e uma trajetória rica em experiência profissional.',
     ogDescription: 'Sou Jefre José Massingue, um apaixonado desenvolvedor fullstack com uma sólida formação em Informática e uma trajetória rica em experiência profissional.',
-    ogImage: '/og.png',
-    twitterCard: 'summary_large_image',
+    ogImage: 'https://jefre.massingue.site/og.png',
+    twitterCard: 'https://jefre.massingue.site/og.png', 
 })
 const menu = ref([
     // { id: 6, title: 'Inicio', route: 'index' },
