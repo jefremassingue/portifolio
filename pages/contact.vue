@@ -1,4 +1,14 @@
 <script setup> 
+useHead({
+    title: 'Contacto - Jefre Massingue',
+//     meta: [
+//         { name: 'description', content: 'Sou Jefre José Massingue, um apaixonado desenvolvedor fullstack com uma sólida formação em Informática e uma trajetória rica em experiência profissional.' }
+//     ],
+    //   bodyAttrs: {
+    //     class: 'test'
+    //   },
+    //   script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+})
 
 </script>
 <template>

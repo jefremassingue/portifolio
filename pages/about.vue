@@ -1,4 +1,14 @@
 <script setup>
+useHead({
+    title: 'Sobre - Jefre Massingue',
+//     meta: [
+//         { name: 'description', content: 'Sou Jefre José Massingue, um apaixonado desenvolvedor fullstack com uma sólida formação em Informática e uma trajetória rica em experiência profissional.' }
+//     ],
+    //   bodyAttrs: {
+    //     class: 'test'
+    //   },
+    //   script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+})
 const currentSkill = ref(1);
 const skills = ref([
         {
