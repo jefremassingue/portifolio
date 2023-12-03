@@ -290,7 +290,8 @@ const currentSkill = ref(1);
         <div class="flex flex-col col-span-10 gap-4 md:col-span-5">
             <h4 class="text-5xl font-bold text-center text-white md:text-left">Habilidades</h4>
 
-            <p class="text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens de programação e frameworks, tendo
+            <p class="text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens de
+                programação e frameworks, tendo
                 alta capacidade de aprender novas tecnologias e conceitos no vasto mundo de desenvolvimento!</p>
             <div class="">
                 <ul class="flex justify-center md:justify-start flex-wrap gap-2">
@@ -340,31 +341,21 @@ const currentSkill = ref(1);
             </header>
 
 
-            <Swiper   :modules="[SwiperAutoplay, SwiperController, SwiperHashNavigation, SwiperNavigation,SwiperPagination]" :slides-per-view="1" :loop="true" :effect="'creative'" :autoplay="{
-                delay: 3000,
-                disableOnInteraction: true,
-            }" :breakpoints="{
-    0: {
-        slidesPerView: 1,
-        spaceBetween: 8,
-    },
-    768: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-    },
-    1024: {
-        slidesPerView: 3,
-        spaceBetween: 16,
-    }
-}" :creative-effect="{
-    prev: {
-        shadow: false,
-        translate: ['-20%', 0, -1],
-    },
-    next: {
-        translate: ['100%', 0, 0],
-    },
-}">
+            <Swiper :modules="[SwiperAutoplay, SwiperController, SwiperHashNavigation, SwiperNavigation, SwiperPagination]"
+                :slides-per-view="1" :loop="true" :effect="'creative'" :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: true,
+                }"
+                :breakpoints="{ 0: { slidesPerView: 1, spaceBetween: 8 }, 768: { slidesPerView: 2, spaceBetween: 16 }, 1024: { slidesPerView: 3, spaceBetween: 16 } }"
+                :creative-effect="{
+                    prev: {
+                        shadow: false,
+                        translate: ['-20%', 0, -1],
+                    },
+                    next: {
+                        translate: ['100%', 0, 0],
+                    },
+                }">
                 <SwiperSlide v-for="project in projects" :key="project.id">
                     <article class="col-span-12 shadow-xl card md:col-span-6 lg:col-span-4 bg-base-100">
                         <figure>
