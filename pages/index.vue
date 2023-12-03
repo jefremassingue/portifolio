@@ -13,7 +13,7 @@ useHead({
 
 const skills = ref([
     {
-        id: 1, title: "Linguagens de Programação & Frameworks", technologies: [
+        id: 1, title: "Linguagens, Bibliotecas & Frameworks", technologies: [
             { id: 1, name: "PHP", image: '/brands/php.svg', description: 'Linguagem de script do lado do servidor.' },
             { id: 2, name: "TypeScript", image: '/brands/typescript.svg', description: 'Superset tipado de JavaScript.' },
             { id: 3, name: "JavaScript", image: '/brands/javascript.svg', description: 'Linguagem de programação para web.' },
