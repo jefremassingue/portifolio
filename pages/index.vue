@@ -309,8 +309,8 @@ const currentSkill = ref(1);
             </div>
         </div>
         <div class="flex items-center w-full md:col-span-7">
-            <ul class="grid flex-wrap items-center justify-center w-full grid-cols-3 gap-4 md:grid-cols-4 lg:flex" name="list"
-                tag="ul">
+            <ul class="grid flex-wrap items-center justify-center w-full grid-cols-3 gap-4 md:grid-cols-4 lg:flex"
+                name="list" tag="ul">
                 <template v-for="tech, in (skills.find(({ id }) => id == currentSkill) || []).technologies"
                     :key="currentSkill + '-' + tech.id">
 
@@ -333,7 +333,8 @@ const currentSkill = ref(1);
             <header class="my-8 md:text-center lg:my-16">
                 <h4 class="text-5xl font-bold text-center text-white md:text-left">Projectos</h4>
 
-                <p class="mt-4 text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens de programação e
+                <p class="mt-4 text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens
+                    de programação e
                     frameworks, tendo
                     alta capacidade de aprender novas tecnologias e conceitos no vasto mundo de desenvolvimento!</p>
 
@@ -487,8 +488,6 @@ const currentSkill = ref(1);
             </div>
         </div>
     </section>
-
-
 </template>
 
 <style >
