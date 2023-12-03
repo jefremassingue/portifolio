@@ -1,6 +1,7 @@
 <script setup>
 const menu = ref([
-    { id: 1, title: 'Inicio', route: 'index' },
+    // { id: 6, title: 'Inicio', route: 'index' },
+    { id: 1, title: 'Sobre', route: 'about' },
     { id: 2, title: 'Serviços', route: 'services' },
     { id: 3, title: 'Projectos', route: 'projects' },
     { id: 4, title: 'Blog', route: 'blog' },
