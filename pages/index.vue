@@ -210,76 +210,40 @@ const services = ref([
 const posts = ref([
     {
         id: 1,
-        title: "Desenvolvimento de aplicativos",
-        description: "Construção de plataformas web, mobile e desktop robustas e intuitivas.",
-        image: "/services/web-mobile-development.jpg",
+        title: "Participação Inspiradora no Orange Corners - Open Day",
+        description: "Uma experiência incrível e enriquecedora, repleta de aprendizado, insights e conexões valiosas.",
+        image: "/posts/orange.jpg",
         details: [
             "Desenvolvimento fullstack utilizando as mais recentes tecnologias e frameworks.",
         ],
     },
     {
         id: 2,
-        title: "Consultoria em Tecnologia",
-        description: "Orientação estratégica para implementação de tecnologias específicas.",
-        image: "/services/technology-consulting.jpg",
+        title: "Participação no evento SINERGIA da MF-Team - Maputo Frontenders",
+        description: "A sinergia é a palavra-chave que impulsionou este encontro, representando uma colaboração que vai além da soma de suas partes individuais.",
+        image: "/posts/orange.jpg",
         details: [
-            "Análise de requisitos e recomendações para otimização de processos.",
+            "Desenvolvimento fullstack utilizando as mais recentes tecnologias e frameworks.",
         ],
     },
     {
         id: 3,
-        title: "UI/UX Design",
-        description: "Criação de interfaces atraentes e intuitivas para experiências de usuário excepcionais.",
-        image: "/services/design.svg",
+        title: "Vitória no Coding Girls Hackathon: Da Inovação à Conquista do Financiamento",
+        description: "Em um ambiente de inovação, colaboração e código, participei do Hackathon Coding Girls e tive a oportunidade de desenvolver e apresentar o projecto agrofresh.",
+        image: "/posts/agrofresh.jpg",
         details: [
-            "Garantia de design responsivo e acessibilidade.",
+            "Desenvolvimento fullstack utilizando as mais recentes tecnologias e frameworks.",
         ],
     },
     {
         id: 4,
-        title: "Desenvolvimento de APIs",
-        description: "Construção de APIs RESTful escaláveis para facilitar a comunicação entre diferentes componentes.",
-        image: "/services/api-development.jpg",
+        title: "Participação no evento da MOZTECH - 2023: Moldando o Futuro da Tecnologia em Moçambique!",
+        description: "A MOZTECH, a maior feira de tecnologia de Moçambique reserva experiências únicas a todos os intervenientes do ramo das tecnologias.",
+        image: "/posts/moztech.jpg",
         details: [
-            "Integração eficiente entre frontend e backend.",
+            "Desenvolvimento fullstack utilizando as mais recentes tecnologias e frameworks.",
         ],
     },
-    // {
-    //     id: 5,
-    //     title: "Gestão de Projetos Ágeis",
-    //     description: "Liderança de equipes de desenvolvimento.",
-    //     image: "/services/agile-project-management.jpg",
-    //     details: [
-    //         "Implementação de metodologias ágeis para garantir entregas eficientes.",
-    //     ],
-    // },
-    //   {
-    //     id: 6,
-    //     title: "Serviços de Redes e Gerenciamento de Dados",
-    //     description: "Configuração e otimização de serviços de redes.",
-    //     image: "/services/network-data-services.jpg",
-    //     details: [
-    //       "Gerenciamento eficiente de bases de dados (SQL e NoSQL).",
-    //     ],
-    //   },
-    {
-        id: 7,
-        title: "Manutenção e Atualização",
-        description: "Suporte contínuo para garantir o bom funcionamento de plataformas existentes.",
-        image: "/services/assistencia.svg",
-        details: [
-            "Atualizações regulares para incorporar as últimas melhorias tecnológicas.",
-        ],
-    },
-    //   {
-    //     id: 8,
-    //     title: "Treinamento e Workshops",
-    //     description: "Sessões de treinamento para equipes em novas tecnologias e práticas de desenvolvimento.",
-    //     image: "/services/training-workshops.jpg",
-    //     details: [
-    //       "Workshops personalizados para aprimorar habilidades específicas.",
-    //     ],
-    //   },
 ]);
 
 const currentSkill = ref(1);
@@ -490,7 +454,7 @@ const currentSkill = ref(1);
         <div class="max-w-screen-xl mx-auto">
 
             <header class="my-16 text-center">
-                <h4 class="text-5xl font-bold text-center text-white md:text-left">Blog</h4>
+                <h4 class="text-5xl font-bold text-center text-white ">Blog</h4>
 
                 <!-- <p class="mt-4 text-center text-white md:text-left">
                     Com uma ampla gama de habilidades técnicas e uma abordagem centrada no utilizador, estou comprometido em
