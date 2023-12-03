@@ -248,7 +248,7 @@ const posts = ref([
 const currentSkill = ref(1);
 </script>
 <template>
-    <section class="grid max-w-screen-xl gap-4 mx-auto text-left lg:grid-cols-2 bg-primary rounded-2xl">
+    <section class="grid max-w-screen-xl gap-4 mx-auto overflow-hidden text-left lg:grid-cols-2 bg-primary rounded-2xl">
 
         <div class="flex flex-col justify-center gap-4 p-8 md:gap-8 md:p-12 lg:p-16 lg:pb-8">
             <h1 class="text-xl font-bold text-white md:text-4xl xl:text-5xl">
@@ -278,7 +278,7 @@ const currentSkill = ref(1);
 
 
         </div>
-        <div class="hidden px-6 overflow-hidden lg:block">
+        <div class="hidden px-6 overflow-hidden lg:flex ">
             <img src="/jefre.png"
                 class="object-cover mx-auto transition-all duration-500 cursor-pointer grayscale hover:grayscale-0 hover:scale-105"
                 alt="">
