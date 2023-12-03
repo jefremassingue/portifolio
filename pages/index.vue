@@ -291,10 +291,10 @@ const currentSkill = ref(1);
         <div class="flex flex-col col-span-10 gap-4 md:col-span-5">
             <h4 class="text-5xl font-bold text-center text-white md:text-left">Habilidades</h4>
 
-            <p class="text-white">Meu conjunto de habilidades abrange diversas linguagens de programação e frameworks, tendo
+            <p class="text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens de programação e frameworks, tendo
                 alta capacidade de aprender novas tecnologias e conceitos no vasto mundo de desenvolvimento!</p>
             <div class="">
-                <ul class="flex flex-wrap gap-2">
+                <ul class="flex justify-center md:justify-start flex-wrap gap-2">
 
                     <li class="" v-for="skill in skills" :key="skill.id">
                         <a class="inline-flex items-center gap-2 px-2 py-2 bg-base-200 rounded-xl">
