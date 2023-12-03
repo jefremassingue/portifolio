@@ -20,7 +20,7 @@ const socialMedia = ref([
         <header>
             <nav class="fixed z-20 w-full px-4 top-4 start-0">
                 <div
-                    class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto bg-base-200 rounded-2xl">
+                    class="flex flex-wrap items-center justify-between max-w-screen-xl p-2 pl-4 md:p-4 mx-auto bg-base-200 rounded-xl md:rounded-2xl">
                     <NuxtLink to="/" class="flex items-center space-x-3">
                         <img src="/logo.svg" class="h-12" alt="Flowbite Logo">
                         <!-- <span class="self-center text-2xl font-semibold text-white whitespace-nowrap">Flowbite</span> -->
@@ -30,19 +30,15 @@ const socialMedia = ref([
                             <i :class="social.icon" class="ri-lg"></i>
                         </a>
                         <NuxtLink :to="{ name: 'contact' }"
-                            class="text-white btn btn-primary btn-sm lg:btn-md">
+                            class="text-white btn btn-primary btn-sm lg:btn-md hidden md:flex">
                             Contacte-me
                         </NuxtLink>
 
                         <button data-collapse-toggle="navbar-sticky" type="button"
-                            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm rounded-lg lg:hidden focus:outline-none focus:ring-2 text-zinc-400 hover:bg-zinc-700 focus:ring-zinc-600"
+                            class="inline-flex -mt-1 items-center justify-center w-10 h-10 rounded-lg lg:hidden focus:outline-none focus:ring-0 text-zinc-400 hover:bg-zinc-700 focus:ring-zinc-600"
                             aria-controls="navbar-sticky" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
-                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 17 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M1 1h15M1 7h15M1 13h15" />
-                            </svg>
+                            <i class="ri-bar-chart-horizontal-line text-2xl rotate-180"></i>
                         </button>
                     </div>
                     <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
