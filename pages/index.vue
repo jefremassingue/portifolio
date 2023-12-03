@@ -1,5 +1,4 @@
 <script setup>
-
 useHead({
     title: 'Olá Mundo - Jefre Massingue',
     meta: [
@@ -341,8 +340,8 @@ const currentSkill = ref(1);
             </header>
 
 
-            <Swiper :slides-per-view="1" :loop="true" :effect="'creative'" :autoplay="{
-                delay: 2000,
+            <Swiper   :modules="[SwiperAutoplay, SwiperController, SwiperHashNavigation, SwiperNavigation,SwiperPagination]" :slides-per-view="1" :loop="true" :effect="'creative'" :autoplay="{
+                delay: 3000,
                 disableOnInteraction: true,
             }" :breakpoints="{
     0: {
