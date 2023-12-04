@@ -5,7 +5,7 @@ useSeoMeta({
     description: 'Sou Jefre José Massingue, um apaixonado desenvolvedor fullstack com uma sólida formação em Informática e uma trajetória rica em experiência profissional.',
     ogDescription: 'Sou Jefre José Massingue, um apaixonado desenvolvedor fullstack com uma sólida formação em Informática e uma trajetória rica em experiência profissional.',
     ogImage: 'https://jefre.massingue.site/og.png',
-    twitterCard: 'https://jefre.massingue.site/og.png', 
+    twitterCard: 'https://jefre.massingue.site/og.png',
 })
 const menu = ref([
     // { id: 6, title: 'Inicio', route: 'index' },
@@ -138,7 +138,8 @@ const services = ref([
     </header>
 
     <Transition name="slide-fade">
-        <aside v-show="showMenu" style="height: 100dvh;" class="bg-base-200 z-30 fixed bottom-0 left-0 right-0 overflow-y-auto">
+        <aside v-show="showMenu" style="height: 100dvh;"
+            class="bg-base-200 z-30 fixed bottom-0 left-0 right-0 overflow-y-auto">
             <header class="flex justify-end "><button @click="showMenu = false" class="btn"><i
                         class="ri-close-line text-3xl font-light"></i></button></header>
 
@@ -157,10 +158,10 @@ const services = ref([
                     <h4 class="font-bold">System Developer</h4>
                     <p class="">
                         (+258) 84 480 6400 / 86 917 3996
-                     </p>
-   <p class="">
+                    </p>
+                    <p class="">
                         jefre.dev@gmail.com <br> jefre@massingue.site
-                     </p>
+                    </p>
                 </div>
 
                 <div class="flex mx-auto items-center gap-2 space-x-3 lg:order-2 lg:space-x-0">
@@ -168,23 +169,23 @@ const services = ref([
                         class="btn btn-primary flex">
                         <i :class="social.icon" class="ri-lg"></i>
                     </a>
-                    </div>
-                    <br>
-                    <div class=" w-full px-8 mx-auto">
-                        <ul
-                            class="flex flex-col gap-2 justify-center items-center font-medium">
-                            <li v-for="link in menu" :key="link.id" class="w-full" @click="showMenu = false">
-                                <NuxtLink :to="{ name: link.route }" class="w-full text-center btn btn-primary rounded-full btn-outline text-white "
-                                    aria-current="page">
-                                    {{ link.title }}</NuxtLink>
-                            </li>
-
-                        </ul>
-                    </div>
                 </div>
+                <br>
+                <div class=" w-full px-8 mx-auto">
+                    <ul class="flex flex-col gap-2 justify-center items-center font-medium">
+                        <li v-for="link in menu" :key="link.id" class="w-full" @click="showMenu = false">
+                            <NuxtLink :to="{ name: link.route }"
+                                class="w-full text-center btn btn-primary rounded-full btn-outline text-white "
+                                aria-current="page">
+                                {{ link.title }}</NuxtLink>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
         </aside>
     </Transition>
-    <main class="mt-[124px] mx-4">
+    <main class="mt-[124px] mx-4" data-theme="dark">
 
         <slot />
 
@@ -196,16 +197,17 @@ const services = ref([
             <p class="w-full">Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
             <p class="w-full">Moçambique, Maputo - Bairro Laulane</p>
             <p class="w-full">
-                        (+258) 84 480 6400 / 86 917 3996
-                     </p>
-   <p class="w-full">
-                        jefre.dev@gmail.com / jefre@massingue.site
-                     </p>
+                (+258) 84 480 6400 / 86 917 3996
+            </p>
+            <p class="w-full">
+                jefre.dev@gmail.com / jefre@massingue.site
+            </p>
         </aside>
         <nav class="w-full">
             <header class="mx-auto md:mx-0 footer-title">Serviços</header>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="service in services" :key="service.id">{{
-                service.title }}</a>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="service in services"
+                :key="service.id">{{
+                    service.title }}</a>
         </nav>
         <nav class="w-full">
             <header class="mx-auto text-center md:mx-0 footer-title ">Páginas</header>
@@ -213,11 +215,12 @@ const services = ref([
                 link.title }}</a>
 
         </nav>
-  
+
         <nav class="w-full">
             <header class="mx-auto md:mx-0 footer-title">Social</header>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="social in socialMedia" :key="social.id">{{
-                social.name }}</a>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="social in socialMedia"
+                :key="social.id">{{
+                    social.name }}</a>
         </nav>
     </footer>
 </template>
@@ -247,5 +250,4 @@ nav a.router-link-exact-active {
 .slide-fade-leave-to {
     transform: translateX(-100vw);
     opacity: 0;
-}
-</style>
+}</style>

@@ -15,7 +15,7 @@ useHead({
         <section></section>
         <!-- ====== Contact Section Start -->
 <section
-   class="relative z-10 overflow-hidden bg-base-100 py-20 lg:py-[120px]"
+   class="relative z-10 overflow-hidden bg-base-100 py-8 lg:py-[120px]"
    >
    <div class="max-w-screen-xl mx-auto">
       <div class="flex flex-wrap -mx-4 lg:justify-between">
