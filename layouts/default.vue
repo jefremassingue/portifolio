@@ -2,11 +2,6 @@
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-try {
-        document.querySelector('#loader').classList.remove('hidden')
-    } catch (error) {
-        
-    }
 onMounted(() => {
     AOS.init();
     try {
