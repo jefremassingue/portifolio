@@ -112,7 +112,7 @@ const services = ref([
     <!-- <LoadingIndicator /> -->
     <transition>
     
-        <div id="loader" class="z-30 fixed top-0 right-0 left-0 bottom-0 bg-base-200 flex justify-center items-center">
+        <div id="loader"  style="height: 100dvh; max-width: 100dvw;" class="z-30 fixed top-0 right-0 left-0 bg-base-200 flex justify-center items-center">
             <div class="flex justify-center items-center flex-col gap-4">
                 <img src="/logo.svg" class="h-24" alt="Flowbite Logo">
                 <h4 class="font-bold">Carregando...</h4>
