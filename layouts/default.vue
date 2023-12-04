@@ -168,7 +168,7 @@ const services = ref([
 
     <Transition name="slide-fade">
         <aside v-show="showMenu" style="height: 100dvh;"
-            class="bg-base-200 z-30 fixed bottom-0 left-0 right-0 overflow-y-auto">
+            class="bg-base-200 z-30 fixed bottom-0 pb-4 left-0 right-0 overflow-y-auto">
             <header class="flex justify-end "><button @click="showMenu = false" class="btn"><i
                         class="ri-close-line text-3xl font-light"></i></button></header>
 
