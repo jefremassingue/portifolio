@@ -90,7 +90,7 @@ const services = ref([
         <section class="p-4 pb-16 -mx-4">
                 <div class="max-w-screen-xl mx-auto">
 
-                        <header class="my-16 text-center">
+                        <header data-aos="fade-down" data-aos-duration="1000" class="my-16 text-center">
                                 <h4 class="text-5xl font-bold text-center text-white ">Meus serviços</h4>
 
                                 <p class="mt-4 text-center text-white ">
@@ -102,7 +102,7 @@ const services = ref([
                         </header>
 
 
-                        <div class="grid grid-cols-12 content-center gap-4">
+                        <div data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-12 content-center gap-4">
                                 <article v-for="service in services" :key="service.id" class="col-span-12 card md:col-span-6 lg:col-span-4 xl:col-span-4 bg-base-200">
                                         <!-- <figure class="px-4 pt-4">
                         <img :src="service.image" :alt="service.title" class=" rounded-xl" />

@@ -86,7 +86,7 @@ const projects = ref([
         <section class="p-4 pb-16 -mx-4">
                 <div class="max-w-screen-xl mx-auto">
 
-                        <header class="my-16 text-center">
+                        <header data-aos="fade-down" data-aos-duration="1000" class="my-16 text-center">
                                 <h4 class="text-5xl font-bold text-center text-white ">Projectos</h4>
 
                                 <p class="mt-4 text-center text-white">
@@ -100,7 +100,7 @@ const projects = ref([
                         </header>
 
 
-                        <div class="grid grid-cols-12 gap-4">
+                        <div data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-12 gap-4">
                                 <article v-for="project in projects" :key="project.id"
                                         class="col-span-12 card md:col-span-6 lg:col-span-4 bg-base-200 ">
                                         <figure>

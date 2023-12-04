@@ -248,7 +248,7 @@ const posts = ref([
 const currentSkill = ref(1);
 </script>
 <template>
-    <section class="grid max-w-screen-xl gap-4 mx-auto overflow-hidden text-left lg:grid-cols-2 bg-primary rounded-2xl">
+    <section  data-aos="fade-right" data-aos-duration="1500" class="grid max-w-screen-xl gap-4 mx-auto overflow-hidden text-left lg:grid-cols-2 bg-primary rounded-2xl">
 
         <div class="flex flex-col justify-center gap-4 p-8 md:gap-8 md:p-12 lg:p-16 lg:pb-8">
             <h1 class="text-xl font-bold text-white md:text-4xl xl:text-5xl">
@@ -278,7 +278,7 @@ const currentSkill = ref(1);
 
 
         </div>
-        <div class="hidden px-6 overflow-hidden lg:flex ">
+        <div  data-aos="fade-left" data-aos-duration="1500" class="hidden px-6 overflow-hidden lg:flex ">
             <img src="/jefre.png"
                 class="object-cover mx-auto transition-all duration-500 cursor-pointer grayscale hover:grayscale-0 hover:scale-105"
                 alt="">
@@ -286,8 +286,8 @@ const currentSkill = ref(1);
 
     </section>
 
-    <section class="flex flex-col max-w-screen-xl grid-cols-12 gap-8 mx-auto my-8 md:grid md:my-16 lg:my-24 md:gap-16">
-        <div class="flex flex-col col-span-10 gap-4 md:col-span-5">
+    <section  data-aos="fade-up" data-aos-duration="1500" class="flex flex-col max-w-screen-xl grid-cols-12 gap-8 mx-auto my-8 md:grid md:my-16 lg:my-24 md:gap-16">
+        <div  data-aos="fade-right" data-aos-duration="1500" class="flex flex-col col-span-10 gap-4 md:col-span-5">
             <h4 class="text-5xl font-bold text-center text-white md:text-left">Habilidades</h4>
 
             <p class="text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens de
@@ -308,7 +308,7 @@ const currentSkill = ref(1);
                 </ul>
             </div>
         </div>
-        <div class="flex items-center w-full md:col-span-7">
+        <div data-aos="fade-left" data-aos-duration="1500" class="flex items-center w-full md:col-span-7">
             <ul class="grid flex-wrap items-center justify-center w-full grid-cols-3 gap-4 md:grid-cols-4 lg:flex"
                 name="list" tag="ul">
                 <template v-for="tech, in (skills.find(({ id }) => id == currentSkill) || []).technologies"
@@ -330,7 +330,7 @@ const currentSkill = ref(1);
     <section class="p-4 pb-16 -mx-4 bg-base-200 lg:-mx-4">
         <div class="w-full max-w-screen-xl mx-auto">
 
-            <header class="my-8 md:text-center lg:my-16">
+            <header  data-aos="fade-right" data-aos-duration="1500" class="my-8 md:text-center lg:my-16">
                 <h4 class="text-5xl font-bold text-center text-white md:text-left">Projectos</h4>
 
                 <p class="mt-4 text-center text-white md:text-left">Meu conjunto de habilidades abrange diversas linguagens
@@ -357,7 +357,7 @@ const currentSkill = ref(1);
                     },
                 }">
                 <SwiperSlide v-for="project in projects" :key="project.id">
-                    <article class="col-span-12 shadow-xl card md:col-span-6 lg:col-span-4 bg-base-100">
+                    <article  data-aos="fade-up" data-aos-duration="1500" class="col-span-12 shadow-xl card md:col-span-6 lg:col-span-4 bg-base-100">
                         <figure>
                             <img :src="project.image" :alt="project.title" />
                         </figure>
@@ -390,11 +390,11 @@ const currentSkill = ref(1);
         </div>
     </section>
 
-    <section class="p-4 pb-16 -mx-4 bg-gray-800 lg:-mx-4">
+    <section  data-aos="fade-up"  class="p-4 pb-16 -mx-4 bg-gray-800 lg:-mx-4">
         <div class="flex max-w-screen-xl mx-auto">
             <div class="grid grid-cols-1 mt-8 gap-4 md:grid-cols-2 lg:grid-cols-3 md:mt-16">
                 <div class="">
-                    <header class="md:mt-12">
+                    <header  data-aos="fade-right" data-aos-duration="1500" class="md:mt-12">
                         <h4 class="text-5xl font-bold text-center text-white md:text-left">Meus serviços</h4>
 
                         <p class="mt-4 text-center text-white md:text-left ">
@@ -405,7 +405,7 @@ const currentSkill = ref(1);
 
                     </header>
                 </div>
-                <article v-for="service in services" :key="service.id" class="col-span-1 card bg-base-100 ">
+                <article  data-aos="fade-up" data-aos-duration="1500" v-for="service in services" :key="service.id" class="col-span-1 card bg-base-100 ">
                     <!-- <figure class="px-4 pt-4">
                         <img :src="service.image" :alt="service.title" class=" rounded-xl" />
                     </figure> -->
@@ -437,10 +437,10 @@ const currentSkill = ref(1);
     </section>
 
 
-    <section class="p-4 pb-16 -mx-4">
+    <section  class="p-4 pb-16 -mx-4">
         <div class="max-w-screen-xl mx-auto">
 
-            <header class="my-16 text-center">
+            <header  data-aos="fade-left" data-aos-duration="1500" class="my-16 text-center">
                 <h4 class="text-5xl font-bold text-center text-white ">Blog</h4>
 
                 <!-- <p class="mt-4 text-center text-white md:text-left">
@@ -452,7 +452,7 @@ const currentSkill = ref(1);
 
 
             <div class="grid grid-cols-12 gap-4">
-                <article v-for="post in posts" :key="post.id"
+                <article  data-aos="fade-up" data-aos-duration="1500" v-for="post in posts" :key="post.id"
                     class="col-span-12 card md:col-span-6 lg:col-span-4 xl:col-span-3 bg-base-200 ">
                     <figure class="px-4 pt-4">
                         <img :src="post.image" :alt="post.title" class=" rounded-xl" />
@@ -475,10 +475,10 @@ const currentSkill = ref(1);
         </div>
     </section>
 
-    <section
+    <section data-aos="fade-up" data-aos-duration="1500"
         class="grid max-w-screen-xl gap-4 p-8 mx-auto my-16 text-left bg-blue-800 md:gap-8 md:p-12 lg:p-16 lg:grid-cols-2 rounded-2xl">
 
-        <div class="flex flex-col justify-center gap-6">
+        <div  data-aos="fade-right" data-aos-duration="1500" class="flex flex-col justify-center gap-6">
             <h1 class="text-xl font-bold text-white md:text-4xl xl:text-5xl">
 
                 <span>Tem uma ideia de projecto. Vamos trabalhar juntos!</span>
@@ -494,7 +494,7 @@ const currentSkill = ref(1);
             </div>
 
         </div>
-        <div class="">
+        <div data-aos="fade-left" data-aos-duration="1500" class="">
             <div class="flex flex-col h-full gap-4 md:flex-row lg:flex-col lg:justify-center lg:px-16 lg:gap-8">
                 <div class="flex items-center gap-4 px-6 py-4 bg-gray-900 rounded-xl">
                     <span>

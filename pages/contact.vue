@@ -20,7 +20,7 @@ useHead({
    <div class="max-w-screen-xl mx-auto">
       <div class="flex flex-wrap -mx-4 lg:justify-between">
          <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
-            <div class="mb-12 max-w-[570px] lg:mb-0">
+            <div data-aos="fade-right" data-aos-duration="1000" class="mb-12 max-w-[570px] lg:mb-0">
                <span class="block mb-4 text-base font-semibold text-primary">
                Contacto
                </span>
@@ -129,7 +129,7 @@ useHead({
                </div>
             </div>
          </div>
-         <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
+         <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div
                class="relative p-8 bg-base-300 rounded-lg shadow-lg  sm:p-12"
                >

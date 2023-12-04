@@ -63,7 +63,7 @@ const skills = ref([
         <section></section>
 
         <section class="p-4 pb-16 max-w-screen-xl mx-auto">
-                <div class="flex my-16 flex-col col-span-10 gap-4 md:col-span-5">
+                <div  data-aos="fade-down" data-aos-duration="1000" class="flex my-16 flex-col col-span-10 gap-4 md:col-span-5">
                         <h4 class="text-5xl font-bold text-center text-white ">Habilidades</h4>
 
                         <p class="text-white text-center">Meu conjunto de habilidades abrange diversas linguagens de programação e
@@ -84,7 +84,7 @@ const skills = ref([
                                 </ul>
                         </div>
                 </div>
-                <div class="flex items-center w-full md:col-span-7">
+                <div  data-aos="fade-up" data-aos-duration="1500" class="flex items-center w-full md:col-span-7">
                         <ul class="grid flex-wrap items-center justify-center w-full grid-cols-3 gap-4 md:grid-cols-4 lg:flex"
                                 name="list" tag="ul">
                                 <template v-for="tech, in (skills.find(({ id }) => id == currentSkill) || []).technologies"

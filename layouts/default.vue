@@ -1,4 +1,12 @@
 <script setup>
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+onMounted(() => {
+    AOS.init();
+    document.querySelector('#loader').classList.add('hidden')
+})
 useSeoMeta({
     title: '👋 Olá Mundo - Jefre Massingue',
     ogTitle: '👋 Olá Mundo - Jefre Massingue',
@@ -98,9 +106,21 @@ const services = ref([
     //   },
 ]);
 </script>
+
+
 <template>
+    <!-- <LoadingIndicator /> -->
+    <transition>
+    
+        <div id="loader" class="z-30 fixed top-0 right-0 left-0 bottom-0 bg-base-200 flex justify-center items-center">
+            <div class="flex justify-center items-center flex-col gap-4">
+                <img src="/logo.svg" class="h-24" alt="Flowbite Logo">
+                <h4 class="font-bold">Carregando...</h4>
+            </div>
+        </div>
+    </transition>
     <header>
-        <nav class="fixed z-20 w-full px-4 top-4 start-0">
+        <nav data-aos="fade-down" data-aos-duration="1500" class="fixed z-20 w-full px-4 top-4 start-0">
             <div
                 class="flex flex-wrap items-center justify-between max-w-screen-xl p-2 pl-4 md:p-4 mx-auto bg-base-200 rounded-xl md:rounded-2xl">
                 <NuxtLink to="/" class="flex items-center space-x-3">
@@ -187,10 +207,11 @@ const services = ref([
     </Transition>
     <main class="mt-[124px] mx-4" data-theme="dark">
         <input type="checkbox" value="dark" checked class="toggle theme-controller hidden" />
+        <NuxtLoadingIndicator /> 
         <slot />
 
     </main>
-    <footer
+    <footer  data-aos="fade-up" data-aos-duration="1500"
         class="max-w-screen-xl p-10 mx-auto mb-0 text-center rounded-t-2xl md:text-left footer bg-base-200 lg:rounded-2xl mt-11 lg:my-11 text-base-content">
         <aside class="w-full">
             <img src="/logo.svg" class="w-32 mx-auto md:mx-0" alt="">
