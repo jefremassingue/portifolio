@@ -5,7 +5,11 @@ import 'aos/dist/aos.css'
 
 onMounted(() => {
     AOS.init();
-    document.querySelector('#loader').classList.add('hidden')
+    try {
+        document.querySelector('#loader').classList.add('hidden')
+    } catch (error) {
+        
+    }
 })
 useSeoMeta({
     title: '👋 Olá Mundo - Jefre Massingue',
@@ -110,6 +114,7 @@ const services = ref([
 
 <template>
     <!-- <LoadingIndicator /> -->
+
     <transition>
     
         <div id="loader"  style="height: 100dvh; max-width: 100dvw;" class="z-30 fixed top-0 right-0 left-0 bg-base-200 flex justify-center items-center">
@@ -205,7 +210,7 @@ const services = ref([
             </div>
         </aside>
     </Transition>
-    <main class="mt-[124px] mx-4" data-theme="dark">
+    <main class="mt-[124px] mx-4" data-theme="dark"  >
         <input type="checkbox" value="dark" checked class="toggle theme-controller hidden" />
         <NuxtLoadingIndicator /> 
         <slot />
@@ -271,5 +276,13 @@ nav a.router-link-exact-active {
 .slide-fade-leave-to {
     transform: translateX(-100vw);
     opacity: 0;
+}
+
+.body, #__nuxt, .fixed, html{
+    max-width: 100vw !important;
+    overflow-x: hidden;
+}
+.fixed{
+    position: fixed !important;
 }
 </style>

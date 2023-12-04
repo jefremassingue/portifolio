@@ -514,15 +514,6 @@ const currentSkill = ref(1);
                         <h2 class="lg:text-lg text-zinc-100">(+258) 84 480 6400 / 86 917 3996</h2>
                     </div>
                 </div>
-                <!-- <div class="flex items-center gap-4 px-6 py-4 bg-gray-900 rounded-xl">
-                    <span>
-                        <i class="ri-phone-line lg:text-[38px]"></i>
-                    </span>
-                    <div class="flex flex-col gap-2">
-                        <h4 class="uppercase">Fala comigo</h4>
-                        <h2 class="lg:text-lg text-zinc-100">jefre.dev@gmail.com</h2>
-                    </div>
-                </div> -->
             </div>
         </div>
 
