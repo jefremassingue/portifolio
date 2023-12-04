@@ -10,5 +10,22 @@ export default {
   // daisyui: {
   //   themes: ["light", "dark"],
   // },
+
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          primary: "blue",
+          "primary-focus": "mediumblue",
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+          primary: "blue",
+          "primary-focus": "mediumblue",
+        },
+      },
+    ],
+  },
 }
 

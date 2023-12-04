@@ -502,7 +502,7 @@ const currentSkill = ref(1);
                     </span>
                     <div class="flex flex-col gap-2">
                         <h4 class="uppercase">Fala comigo</h4>
-                        <h2 class="lg:text-lg text-zinc-100">jefre.dev@gmail.com</h2>
+                        <h2 class="lg:text-lg text-zinc-100">jefre.dev@gmail.com <br> jefre@massingue.site</h2>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 px-6 py-4 bg-gray-900 rounded-xl">

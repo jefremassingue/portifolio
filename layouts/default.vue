@@ -155,6 +155,12 @@ const services = ref([
                 <div class="text-center">
                     <h2 class="font-bold text-xl text-white">Jefre J. Massingue</h2>
                     <h4 class="font-bold">System Developer</h4>
+                    <p class="">
+                        (+258) 84 480 6400 / 86 917 3996
+                     </p>
+   <p class="">
+                        jefre.dev@gmail.com <br> jefre@massingue.site
+                     </p>
                 </div>
 
                 <div class="flex mx-auto items-center gap-2 space-x-3 lg:order-2 lg:space-x-0">
@@ -189,6 +195,12 @@ const services = ref([
             <img src="/logo.svg" class="w-32 mx-auto md:mx-0" alt="">
             <p class="w-full">Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
             <p class="w-full">Moçambique, Maputo - Bairro Laulane</p>
+            <p class="w-full">
+                        (+258) 84 480 6400 / 86 917 3996
+                     </p>
+   <p class="w-full">
+                        jefre.dev@gmail.com / jefre@massingue.site
+                     </p>
         </aside>
         <nav class="w-full">
             <header class="mx-auto md:mx-0 footer-title">Serviços</header>

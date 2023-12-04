@@ -123,7 +123,7 @@ useHead({
                         Email
                      </h4>
                      <p class="text-base text-zinc-200">
-                        jefre.dev@gmail.com
+                        jefre.dev@gmail.com <br> jefre@massingue.site
                      </p>
                   </div>
                </div>
