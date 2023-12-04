@@ -20,7 +20,83 @@ const socialMedia = ref([
     { id: 1, name: 'Linkedin', icon: 'ri-linkedin-line', link: "https://mz.linkedin.com/in/jefre-jos%C3%A9-massingue-21086a277?trk=people-guest_people_search-card" },
     { id: 2, name: 'Github', icon: 'ri-github-line', link: "https://github.com/jefremassingue" },
     { id: 3, name: 'Instagram', icon: 'ri-instagram-line', link: "https://www.instagram.com/jefre.dev/" },
-])
+]);
+
+
+const services = ref([
+    {
+        id: 1,
+        title: "Desenvolvimento de aplicativos",
+        description: "Construção de plataformas web, mobile e desktop robustas e intuitivas.",
+        icon: "ri-terminal-window-line",
+        details: [
+            "Desenvolvimento fullstack utilizando as mais recentes tecnologias e frameworks.",
+        ],
+    },
+    {
+        id: 2,
+        title: "Consultoria em Tecnologia",
+        description: "Orientação estratégica para implementação de tecnologias específicas.",
+        icon: "ri-headphone-line",
+        details: [
+            "Análise de requisitos e recomendações para otimização de processos.",
+        ],
+    },
+    {
+        id: 3,
+        title: "UI/UX Design",
+        description: "Criação de interfaces atraentes e intuitivas para experiências de usuário excepcionais.",
+        icon: "ri-palette-fill",
+        details: [
+            "Garantia de design responsivo e acessibilidade.",
+        ],
+    },
+    {
+        id: 4,
+        title: "Desenvolvimento de APIs",
+        description: "Construção de APIs RESTful escaláveis para facilitar a comunicação entre diferentes componentes.",
+        icon: "ri-code-s-slash-line",
+        details: [
+            "Integração eficiente entre frontend e backend.",
+        ],
+    },
+    // {
+    //     id: 5,
+    //     title: "Gestão de Projetos Ágeis",
+    //     description: "Liderança de equipes de desenvolvimento.",
+    //     icon: "ri-palette-fill",
+    //     details: [
+    //         "Implementação de metodologias ágeis para garantir entregas eficientes.",
+    //     ],
+    // },
+    //   {
+    //     id: 6,
+    //     title: "Serviços de Redes e Gerenciamento de Dados",
+    //     description: "Configuração e otimização de serviços de redes.",
+    //     icon: "ri-palette-fill",
+    //     details: [
+    //       "Gerenciamento eficiente de bases de dados (SQL e NoSQL).",
+    //     ],
+    //   },
+    {
+        id: 7,
+        title: "Manutenção e Atualização",
+        description: "Suporte contínuo para garantir o bom funcionamento de plataformas existentes.",
+        icon: "ri-tools-fill",
+        details: [
+            "Atualizações regulares para incorporar as últimas melhorias tecnológicas.",
+        ],
+    },
+    //   {
+    //     id: 8,
+    //     title: "Treinamento e Workshops",
+    //     description: "Sessões de treinamento para equipes em novas tecnologias e práticas de desenvolvimento.",
+    //     icon: "ri-palette-fill",
+    //     details: [
+    //       "Workshops personalizados para aprimorar habilidades específicas.",
+    //     ],
+    //   },
+]);
 </script>
 <template>
     <header>
@@ -62,7 +138,7 @@ const socialMedia = ref([
     </header>
 
     <Transition name="slide-fade">
-        <aside v-show="showMenu" class="bg-base-200 z-30 fixed bottom-0 left-0 right-0 h-screen overflow-y-auto">
+        <aside v-show="showMenu" style="height: 100dvh;" class="bg-base-200 z-30 fixed bottom-0 left-0 right-0 overflow-y-auto">
             <header class="flex justify-end "><button @click="showMenu = false" class="btn"><i
                         class="ri-close-line text-3xl font-light"></i></button></header>
 
@@ -115,23 +191,21 @@ const socialMedia = ref([
             <p>Moçambique, Maputo - Bairro Laulane</p>
         </aside>
         <nav class="w-full">
-            <header class="mx-auto text-center md:mx-0 footer-title ">Paginas</header>
+            <header class="mx-auto md:mx-0 footer-title">Serviços</header>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="service in services" :key="service.id">{{
+                service.title }}</a>
+        </nav>
+        <nav class="w-full">
+            <header class="mx-auto text-center md:mx-0 footer-title ">Páginas</header>
             <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="link in menu" :key="link.id">{{
                 link.title }}</a>
 
         </nav>
+  
         <nav class="w-full">
-            <header class="mx-auto md:mx-0 footer-title">Servicos</header>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">About us</a>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Contact</a>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Jobs</a>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Press kit</a>
-        </nav>
-        <nav class="w-full">
-            <header class="mx-auto md:mx-0 footer-title">Legal</header>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Terms of use</a>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Privacy policy</a>
-            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left">Cookie policy</a>
+            <header class="mx-auto md:mx-0 footer-title">Social</header>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="social in socialMedia" :key="social.id">{{
+                social.name }}</a>
         </nav>
     </footer>
 </template>

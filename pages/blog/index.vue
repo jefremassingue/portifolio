@@ -24,7 +24,7 @@ const posts = ref([
         id: 2,
         title: "Participação no evento SINERGIA da MF-Team - Maputo Frontenders",
         description: "A sinergia é a palavra-chave que impulsionou este encontro, representando uma colaboração que vai além da soma de suas partes individuais.",
-        image: "/posts/orange.jpg",
+        image: "/posts/sinergia.jpeg",
         details: [
             "Desenvolvimento fullstack utilizando as mais recentes tecnologias e frameworks.",
         ],
