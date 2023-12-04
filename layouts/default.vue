@@ -186,7 +186,7 @@ const services = ref([
         </aside>
     </Transition>
     <main class="mt-[124px] mx-4" data-theme="dark">
-
+        <input type="checkbox" value="dark" checked class="toggle theme-controller hidden" />
         <slot />
 
     </main>
@@ -250,4 +250,5 @@ nav a.router-link-exact-active {
 .slide-fade-leave-to {
     transform: translateX(-100vw);
     opacity: 0;
-}</style>
+}
+</style>
