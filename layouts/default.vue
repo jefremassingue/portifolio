@@ -185,10 +185,10 @@ const services = ref([
     </main>
     <footer
         class="max-w-screen-xl p-10 mx-auto mb-0 text-center rounded-t-2xl md:text-left footer bg-base-200 lg:rounded-2xl mt-11 lg:my-11 text-base-content">
-        <aside>
+        <aside class="w-full">
             <img src="/logo.svg" class="w-32 mx-auto md:mx-0" alt="">
-            <p>Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
-            <p>Moçambique, Maputo - Bairro Laulane</p>
+            <p class="w-full">Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
+            <p class="w-full">Moçambique, Maputo - Bairro Laulane</p>
         </aside>
         <nav class="w-full">
             <header class="mx-auto md:mx-0 footer-title">Serviços</header>
