@@ -392,10 +392,6 @@ const currentSkill = ref(1);
 
     <section class="p-4 pb-16 -mx-4 bg-gray-800 lg:-mx-4">
         <div class="flex max-w-screen-xl mx-auto">
-
-
-
-
             <div class="grid grid-cols-1 mt-8 gap-4 md:grid-cols-2 lg:grid-cols-3 md:mt-16">
                 <div class="">
                     <header class="md:mt-12">
@@ -430,8 +426,8 @@ const currentSkill = ref(1);
                         </div>
 
                         <div class="mt-1 card-actions ">
-                            <a href="" class="btn btn-primary btn-sm btn-link">Vamos trabalhar juntos <i
-                                    class="no-underline ri-arrow-right-line ri-lg"></i></a>
+                            <NuxtLink :to="{name: 'contact'}" class="btn btn-primary btn-sm btn-link">Vamos trabalhar juntos <i
+                                    class="no-underline ri-arrow-right-line ri-lg"></i></NuxtLink>
                         </div>
                     </div>
                 </article>
@@ -491,10 +487,10 @@ const currentSkill = ref(1);
                 Quer me dizer oi ou quer começar seu projecto e precisa da minha ajuda? Sinta-se livre para me contactar.
             </p>
             <div class="flex flex-col gap-4 md:flex-row">
-                <button class="btn btn-warning">
+                <NuxtLink :to="{name: 'contact'}" class="btn btn-warning">
                     <span>Vamos trabalhar juntos!</span>
                     <i class="ri-arrow-right-line"></i>
-                </button>
+                </NuxtLink>
             </div>
 
         </div>
