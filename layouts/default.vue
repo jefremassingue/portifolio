@@ -339,7 +339,7 @@ const services = ref([
             <i class="ri-whatsapp-fill ri-xl"></i>
         </div>
         <!-- sub left -->
-        <a href="wa.me/258844806400" target="_blank"
+        <a href="https://wa.me/258844806400" target="_blank"
             class="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16   h-10 w-10 flex items-center justify-center p-2 hover:p-3 bg-green-600 scale-100 hover:bg-green-500 text-white">
             <i class="ri-whatsapp-line ri-xl"></i>
 
