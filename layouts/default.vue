@@ -211,7 +211,7 @@ const services = ref([
     <header>
         <nav data-aos="fade-down" data-aos-duration="1500" class="fixed z-20 w-full px-4 top-4 start-0">
             <div
-                class="flex flex-wrap items-center justify-between max-w-screen-xl p-2 pl-4 md:p-4 mx-auto bg-base-200 rounded-xl md:rounded-2xl">
+                class="flex flex-wrap items-center justify-between max-w-screen-xl p-2 pl-4 w-full md:p-4 mx-auto bg-base-200 rounded-xl md:rounded-2xl">
                 <NuxtLink to="/" class="flex items-center space-x-3">
                     <img src="/logo.svg" class="h-12" alt="Flowbite Logo">
                     <!-- <span class="self-center text-2xl font-semibold text-white whitespace-nowrap">Flowbite</span> -->
@@ -289,52 +289,77 @@ const services = ref([
                                 {{ link.title }}</NuxtLink>
                         </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
+        </aside>
+    </Transition>
+    <main class="mt-[124px] mx-4" data-theme="dark">
+        <input type="checkbox" value="dark" checked class="toggle theme-controller hidden" />
+        <slot />
+
+    </main>
+    <footer data-aos="fade-up" data-aos-duration="1500"
+        class="max-w-screen-xl p-10 mx-auto mb-0 text-center rounded-t-2xl md:text-left footer bg-base-200 lg:rounded-2xl mt-11 lg:my-11 text-base-content">
+        <aside class="w-full">
+            <img src="/logo.svg" class="w-32 mx-auto md:mx-0" alt="">
+            <p class="w-full">Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
+            <p class="w-full">Moçambique, Maputo - Bairro Laulane</p>
+            <p class="w-full">
+                (+258) 84 480 6400 / 86 917 3996
+            </p>
+            <p class="w-full">
+                jefre.dev@gmail.com / jefre@massingue.site
+            </p>
+        </aside>
+        <nav class="w-full">
+            <header class="mx-auto md:mx-0 footer-title">Serviços</header>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="service in services"
+                :key="service.id">{{
+                    service.title }}</a>
+        </nav>
+        <nav class="w-full">
+            <header class="mx-auto text-center md:mx-0 footer-title ">Páginas</header>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="link in menu" :key="link.id">{{
+                link.title }}</a>
+
+        </nav>
+
+        <nav class="w-full">
+            <header class="mx-auto md:mx-0 footer-title">Social</header>
+            <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="social in socialMedia"
+                :key="social.id">{{
+                    social.name }}</a>
+        </nav>
+    </footer>
+    <div class="group fixed bottom-4 right-4 p-2 overflow-visible flex items-end justify-end w-32 h-32 ">
+        <!-- main -->
+        <div
+            class="text-white shadow-xl flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-cyan-500 h-12 w-12 to-blue-500 z-50 absolute  ">
+            <i class="ri-whatsapp-fill ri-xl"></i>
         </div>
-    </aside>
-</Transition>
-<main class="mt-[124px] mx-4" data-theme="dark">
-    <input type="checkbox" value="dark" checked class="toggle theme-controller hidden" />
-    <NuxtLoadingIndicator />
-    <slot />
+        <!-- sub left -->
+        <a href="wa.me/258844806400" target="_blank"
+            class="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16   h-10 w-10 flex items-center justify-center p-2 hover:p-3 bg-green-600 scale-100 hover:bg-green-500 text-white">
+            <i class="ri-whatsapp-line ri-xl"></i>
 
-</main>
-<footer data-aos="fade-up" data-aos-duration="1500"
-    class="max-w-screen-xl p-10 mx-auto mb-0 text-center rounded-t-2xl md:text-left footer bg-base-200 lg:rounded-2xl mt-11 lg:my-11 text-base-content">
-    <aside class="w-full">
-        <img src="/logo.svg" class="w-32 mx-auto md:mx-0" alt="">
-        <p class="w-full">Jefre José Massingue.<br />Vamos transformar a sua ideia em <br>uma solução tecnologica</p>
-        <p class="w-full">Moçambique, Maputo - Bairro Laulane</p>
-        <p class="w-full">
-            (+258) 84 480 6400 / 86 917 3996
-        </p>
-        <p class="w-full">
-            jefre.dev@gmail.com / jefre@massingue.site
-        </p>
-    </aside>
-    <nav class="w-full">
-        <header class="mx-auto md:mx-0 footer-title">Serviços</header>
-        <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="service in services"
-            :key="service.id">{{
-            service.title }}</a>
-    </nav>
-    <nav class="w-full">
-        <header class="mx-auto text-center md:mx-0 footer-title ">Páginas</header>
-        <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="link in menu" :key="link.id">{{
-            link.title }}</a>
+        </a>
+        <!-- sub top -->
+        <a href="tel:+258869173996"
+            class="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-16  h-10 w-10 flex items-center justify-center p-2 hover:p-3 bg-blue-600 hover:bg-blue-500  text-white">
+            <i class="ri-phone-line ri-xl"></i>
+        </a>
+        <!-- sub middle -->
+        <a href="mailto:jefre.dev@gmail.com"
+            class="absolute rounded-full transition-all duration-[0.2s]   h-10 w-10 items-center justify-center ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14   flex  p-2 hover:p-3 bg-zinc-600 hover:bg-zinc-400 text-white">
+            <i class="ri-message-fill ri-xl"></i>
 
-    </nav>
+        </a>
+    </div>
+</template>
 
-    <nav class="w-full">
-        <header class="mx-auto md:mx-0 footer-title">Social</header>
-        <a class="mx-auto text-center md:mx-0 link link-hover md:text-left" v-for="social in socialMedia"
-            :key="social.id">{{
-            social.name }}</a>
-    </nav>
-</footer></template>
-
-<style >nav a:hover,
+<style >
+nav a:hover,
 nav a.router-link-active,
 nav a.router-link-exact-active {
     /* color: indianred; */
@@ -364,17 +389,20 @@ nav a.router-link-exact-active {
 #__nuxt,
 .fixed,
 html {
+    /* max-height: 100vh; */
     max-width: 100vw !important;
     overflow-x: hidden;
+}
+
+#__nuxt {
+    max-height: 100vh;
 }
 
 .fixed {
     position: fixed !important;
 }
 
-.hidden {
-    display: none;
-}
+
 
 .cls-1 {
     fill: #3297ba;
