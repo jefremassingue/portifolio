@@ -394,12 +394,32 @@ html {
     overflow-x: hidden;
 }
 
-#__nuxt {
-    max-height: 100vh;
+#__nuxt::-webkit-scrollbar {
+  display: none;
 }
-
 .fixed {
     position: fixed !important;
+}
+
+/*=============== SCROLL BAR ===============*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(204, 204, 204, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(79, 70, 229, 0.4);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(79, 70, 229, 0.8);
+    cursor: pointer;
 }
 
 
@@ -486,4 +506,5 @@ html {
 
 .cls-21 {
     fill: url(#linear-gradient-4);
-}</style>
+}
+</style>
